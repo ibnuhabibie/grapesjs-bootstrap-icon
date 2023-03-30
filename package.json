@@ -1,0 +1,28 @@
+{
+  "name": "grapesjs-bootstrap-icon",
+  "version": "1.0.0",
+  "description": "Grapesjs Bootstrap Icon",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibnuhabibie/grapesjs-bootstrap-icon.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "grapesjs-cli": "^4.0.1",
+    "style-loader": "^3.3.2"
+  },
+  "license": "MIT"
+}
