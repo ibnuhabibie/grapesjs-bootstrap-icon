@@ -1,11 +1,10 @@
-import loadComponents from "./components";
 import loadBlocks from "./blocks";
+import loadComponents from "./components";
 
 import addOpenCommand from "./commands/openIconPicker";
 
 import en from "./locale/en";
 import "./style.css";
-import icons from "./icons.json";
 
 export default (editor, opts = {}) => {
   const options = {
