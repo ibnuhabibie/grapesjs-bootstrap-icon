@@ -2,7 +2,7 @@ export default ({ config }) => ({
   ...config,
   output: {
     ...config.output,
-    library: "grapesjs-bootstrap-icon",
+    library: "gjs-bootstrap-icon",
   },
   module: {
     ...config.module,

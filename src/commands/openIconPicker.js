@@ -35,6 +35,15 @@ export default (editor, opts = {}) => {
       let wrapper = document.createElement("ul");
       wrapper.classList.add("icons-list");
 
+      if (icons.length == 0) {
+        let emptyState = document.createElement("p");
+        emptyState.classList.add("empty-state");
+        emptyState.innerText = "No icons found";
+
+        wrapper.appendChild(emptyState);
+        return wrapper;
+      }
+
       icons.forEach((icon) => {
         let iconEl = document.createElement("i");
         iconEl.classList.add(`bi-${icon}`);
@@ -60,12 +69,17 @@ export default (editor, opts = {}) => {
 
       let wrapper = this.renderIcons(icons);
 
+      let searchWrapper = document.createElement("div");
+      searchWrapper.classList.add("search-wrapper");
+
       let searchEl = document.createElement("input");
       searchEl.setAttribute("placeholder", "Start typing to filter...");
 
+      searchWrapper.appendChild(searchEl);
+
       searchEl.addEventListener("keyup", (e) => this.filterIcon(e));
 
-      modalContent.appendChild(searchEl);
+      modalContent.appendChild(searchWrapper);
       modalContent.appendChild(wrapper);
 
       return modalContent;
