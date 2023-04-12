@@ -6,11 +6,11 @@ export default (editor, opts = {}) => {
       let selected = editor.getSelected();
 
       if (e.target.tagName == "SPAN") {
-        var className = "bi-" + e.target.innerText;
+        var className = "bi bi-" + e.target.innerText;
       } else if (e.target.tagName == "I") {
-        var className = e.target.className;
+        var className = `bi ${e.target.className}`;
       } else {
-        var className = e.target.firstChild.className;
+        var className = `bi ${e.target.firstChild.className}`;
       }
 
       selected.setClass(className);
@@ -87,7 +87,7 @@ export default (editor, opts = {}) => {
 
     run() {
       editor.Modal.open({
-        title: "Bootstrap Icon Picker",
+        title: opts.modalTitle ?? "Bootstrap Icon Picker",
         content: this.renderModal(icons),
         attributes: {
           id: "bootstrap-icon-modal",

@@ -33,10 +33,6 @@ export default (editor, opts = {}) => {
     const head = editor.Canvas.getDocument().head;
     head.insertAdjacentHTML("beforeend", bootstrapIconCdn);
     document.head.insertAdjacentHTML("beforeend", bootstrapIconCdn);
-    editor.addComponents(
-      `<i data-gjs-type="bootstrapIcon"  class="bi-alarm" style="font-size: 20rem; color: cornflowerblue;"></i>`,
-      { at: 0 }
-    );
   });
 
   addOpenCommand(editor, options);
